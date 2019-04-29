@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <!-- Latest compiled and minified CSS & JS -->
+    
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+   
+    
+    
+</head>
+<body>
+    
+          
+          <div class="container">
+             <div class="row">
+                 
+                 <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                       <% congviecs.map(item=>{%>
+                        <% if(item.status == true){%>
+                        
+                       <div class="alert alert-warning">
+                           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                           <h2><%=tenCongViec%></h2> 
+                          
+                       </div>
+                       <a href="" class="btn btn-success">Hoàn thành</a>
+                       <%}else{%>
+                        <div class="alert alert-warning">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                           <h2><strike><%=tenCongViec%></strike></h2>
+                           
+                        </div>
+                       <%})%>
+
+                       
+                       <form action="" method="GET" role="form">
+                           <legend>Thêm Công việc</legend>
+                       
+                           <div class="form-group">
+                               <label for="">Tên Công Việc</label>
+                               <input type="text" class="form-control" id="" name="tenCongViec"placeholder="Input field">
+                           </div>
+                        
+                           <button type="submit" class="btn btn-primary">Thêm Công việc</button>
+                       </form>
+                       
+                 </div>
+                 
+             </div>
+
+          </div>
+          
+       
+          <script src="//code.jquery.com/jquery.js"></script>
+          <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</body>
+</html>
